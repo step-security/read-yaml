@@ -13,7 +13,7 @@ inputs:
     description: 'List of keys to follow'
     required: true
 
-outputs:
+output:
   data:
     description: 'Data read from YAML file'
 
