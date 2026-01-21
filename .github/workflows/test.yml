@@ -1,0 +1,27 @@
+on: [ push, pull_request ]
+
+jobs:
+  test-yaml-reader:
+    runs-on: ubuntu-latest
+    name: Test read-yaml
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Run read-yaml action
+        id: using
+        uses: ./
+        with:
+          file: './action.yml'
+          key-path: '["runs", "using"]'
+      
+      - name: Run read-yaml action
+        id: desc
+        uses: ./
+        with:
+          file: './action.yml'
+          key-path: '["output", "data", "description"]'
+        
+      - name: Get read-yaml outputs
+        run: |
+          echo '${{ steps.using.outputs.data }}'
+          echo '${{ steps.desc.outputs.data }}'
