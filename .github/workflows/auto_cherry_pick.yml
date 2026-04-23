@@ -21,6 +21,10 @@ on:
         required: false
         type: string
         default: "yarn"
+      node_version:
+        description: "Specify Node.js version (e.g., '18', '20', 'lts/*')"
+        required: false
+        default: "24"
 
   pull_request:
     types: [opened, synchronize, labeled]
@@ -42,3 +46,4 @@ jobs:
       mode: ${{ github.event_name == 'pull_request' && 'verify' || inputs.mode }}
       script: ${{ inputs.script || 'yarn build' }}
       package_manager: ${{ inputs.package_manager || 'yarn' }}
+      node_version: "${{ inputs.node_version || '24' }}"
