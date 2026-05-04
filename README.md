@@ -1,3 +1,5 @@
+[![StepSecurity Maintained Action](https://raw.githubusercontent.com/step-security/maintained-actions-assets/main/assets/maintained-action-banner.png)](https://docs.stepsecurity.io/actions/stepsecurity-maintained-actions)
+
 <img align="right" src="https://upload.wikimedia.org/wikipedia/commons/f/f8/YAML_Logo.svg" width=150></img>
 # Read YAML
 
